@@ -50,3 +50,26 @@ if (userNum % 2 != 0):
   print("You have given an odd number")
 else:
   print("You have given an even number")
+
+# Math Quadrants
+# Ask the user for an x and y value
+# Using a nested conditional, output which quadrant they are in. 
+
+quad = int(input("Enter a number for x: "))
+quadY = int(input("Enter a number for y: "))
+if(quad > 0):
+  if(quadY > 0):
+    print("Your coordinates would be in Quad 1")
+  else:
+    print("Your coordinates would be in Quad 4")
+elif(quadY > 0):
+  print("Your coordinates are in Quad 2")
+elif(quadY == 0):
+  if(quad == 0):
+    print("Your coodinates are on the origin")
+else:
+  print("Your coordinates are in Quad 3")
+
+#If x and y are 0, output the origin 
+#and, or
+#and takes precendence over or
