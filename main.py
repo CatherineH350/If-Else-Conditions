@@ -31,8 +31,9 @@ else:
 
 #hungry?
 
-isHungry = False
+isHungry = True
 isSleepy = False
+isBored = True
 if(isHungry == True):
   print("You should go eat")
 elif(isSleepy == True):
@@ -41,6 +42,17 @@ elif(isSleepy == False):
   print("Wow, great sleep schedule")
 else:
   print("I ADMIRE YOUR STRESS EATING :D")
+
+
+if(isHungry == isBored or isSleepy == isHungry):
+  print("You should do your homework")
+else: 
+  print("You can play outside")
+
+if(isSleepy == isHungry and isHungry == isBored):
+  print("It's nap time")
+else: 
+  print("It's time for bed!")
 
 #Ask the user for a number
 #Tell the user if their number is even or odd.
@@ -54,6 +66,7 @@ else:
 # Math Quadrants
 # Ask the user for an x and y value
 # Using a nested conditional, output which quadrant they are in. 
+
 
 quad = int(input("Enter a number for x: "))
 quadY = int(input("Enter a number for y: "))
@@ -70,6 +83,50 @@ elif(quadY == 0):
 else:
   print("Your coordinates are in Quad 3")
 
+if(quad < 0 and quadY > 0):
+ print("Your coordinates are in Quad 2")
+elif(quad < 0 and quadY < 0):
+  print("Your coordinates are in Quad 3")
+
+# let the user know when they are on the x-axis or the y-axis
+#if we have +y or -y but x == 0 
+#"You are on the "y-axis"
+#if we have -x and +x but y == 0 
+#You are on the x-axis
+
+if(quad == 0):
+   if(quadY > 0):
+     print("Your coordinates are on the y axis, above the origin.")
+   elif(quad == 0 and quadY < 0):
+     print("Your coordinates are on the y axis, below the origin")
+   else: 
+     print("Your coordinates are on the origin")
+elif(quadY == 0):
+  if(quad > 0):
+    print("Your coordinates are on the x axis, to the right of the origin")
+  elif(quad < 0):
+    print("Your coordinates are on the x axis, to the left of the origin")
+  else:
+    print("Your coordinates are on the origin")
+
+
+#create ab if statement using "and" or "or" for the third and second qudrant. 
+
 #If x and y are 0, output the origin 
 #and, or
 #and takes precendence over or
+#"and" both conditions have to be true 
+#"or" only one has to be correct 
+
+x = 5
+y = 6
+z = 7
+if(x == 5 and y == 5 or z == 5):
+  print("Yay")
+else:
+  print("Nay ")
+
+if(x == 5 or y ==5 and z == 5):
+  print("IM DA BEST")
+else:
+  print("IM STILL DA BEST")
